@@ -11,7 +11,10 @@ import TopBar from '@components/site/common/TopBar.astro'
     <title>Secretplan</title>
   </head>
   <body>
-    <TopBar />
-    <slot />
+    <body class="dark:bg-black dark:text-white">
+      <div class="max-w-5x1 px-4 py-4 mx-auto"></div>
+      <TopBar />
+      <slot />
+    </body>
   </body>
 </html>
