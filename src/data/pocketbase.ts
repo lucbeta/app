@@ -10,3 +10,13 @@ export const pb = new PocketBase(import.meta.env.POCKETBASE_URL ||
       
         return projects
       }
+
+      export async function addProject(name: string) {
+        const newProject = await pb.collection('projects')
+          .create({
+            name,
+            status: 'not started',
+          })
+          
+        return newProject
+      }
